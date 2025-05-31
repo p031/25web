@@ -6,23 +6,26 @@
   <title>Jpark Diary</title>
   <link rel="stylesheet" href="./css/mystyle.css">
 </head>
+
 <body>
   <div class="title">
-      To-Do List
-      <div class="date">
-        날짜
-      </div>
+    To-Do List
+  </div>
+
+  <div class="date">
+    날짜
   </div>
 
   <div class="content">
-    <div class="real">
-      <div class="saying">
-        명언
-      </div>
+    <div class="saying" id="quoteBox"></div>
+    <div class="text">
+        📋 할 일 목록
     </div>
-  
+    <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+    <button onclick="addTodo()" id="btn">추가</button>
+
+    <div id="todoList"></div>
   </div>
-   
-   
+  <script src="javascript.js"></script>
 </body>
 </html>
