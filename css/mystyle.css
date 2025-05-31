@@ -1,35 +1,82 @@
 .title{
-  font-size:60px;
-  border: 1px solid #000000;
-  text-align:center;
+  font-size : 60px;
+  text-align : center;
 }
 
 .date{
-  font-size:25px;
-  margin : 10px 0 0 1600px;
-  border: 1px solid #000000;
-  text-align:center;
-  height : 30px;
-  width : 300px;
-}
-
-.content{ /* 완성 후 지울 예정*/
+  font-size : 25px;
+  margin : 5% 10% 0 70%;   /*상 우 하 좌*/
   border : 1px solid #000000;
-  height : 700px;
+  text-align : center;
 }
 
-.real{
-  margin : 10px 200px 0 200px;
+.content{
+  margin : 0 10% 0 10%;   /*상 우 하 좌*/
   font-size : 25px;
   border : 1px solid #000000;
   height : 700px;
 }
 
 .saying{ /*명언 넣는 부분*/
-  margin : 10px 100px 0 30px;
+  margin : 10px 100px 0 30px;  /*상 우 하 좌*/
   font-size : 25px;
-  border : 1px solid #000000;
   height : 45px;
   width : 80%;
   text-align : center;
+  font-style: italic;
+  color: #555;
+  background-color: bisque;
+}
+
+.text{  /*할 일 목록 제목*/
+  font-size : 25px;
+  margin : 5% 65% 2% 5%;  /*상 우 하 좌*/
+  text-align : center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 5%;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.todo-item {
+  margin-top: 8px;
+}
+
+.todo-item input[type="checkbox"] {
+  accent-color: #28a745;
+  margin-left: 5%;
+}
+
+.delete_button{
+ background-color: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.delete_button:hover {
+  background-color: darkred;
 }
