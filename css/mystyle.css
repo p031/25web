@@ -1,4 +1,4 @@
-.title{Add commentMore actions
+.title{
   font-size : 60px;
   text-align : center;
   font-size: 60px;
@@ -50,7 +50,52 @@
   text-align : center;
   font-size: 25px;
   margin: 5% 65% 2% 5%;  /*상 우 하 좌*/
-  text-align: center;Add commentMore actions
+  text-align: center;
 }
 
 input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 5%;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.todo-item {
+  margin-top: 8px;
+}
+
+.todo-item input[type="checkbox"] {
+  accent-color: #28a745;
+  margin-left: 5%;
+}
+
+.delete_button{
+ background-color: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.delete_button:hover {
+  background-color: darkred;
+}
