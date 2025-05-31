@@ -1,5 +1,5 @@
 .title{
-  font-size: 60px;
+  font-size: 60;
   text-align: center;
 }
 
@@ -13,7 +13,7 @@
 .content{
   margin: 0 10% 0 10%;   /*상 우 하 좌*/
   font-size: 25px;
-  border: 1px solid #000000;
+  border: 1 solid white;
   height: 700px;
 }
 
@@ -29,25 +29,25 @@
 }
 
 .text{  /*할 일 목록 제목*/
-  font-size: 25px;
-  margin: 5% 65% 2% 5%;  /*상 우 하 좌*/
+  font-size: 25;
+  margin: 5 65 2 5;  /*상 우 하 좌*/
   text-align: center;
 }
 
 input[type="text"] {
-  padding: 10px;
-  width: 300px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-left: 5%;
+  padding: 10;
+  width: 300;
+  font-size: 16;
+  border: 1 solid #ccc;
+  border-radius: 5;
+  margin-left: 5;
 }
 
 button {
   padding: 10px 20px;
   margin-left: 10px;
   font-size: 16px;
-  background-color: #28a745;
+  background-color: green;
   color: white;
   border: none;
   border-radius: 5px;
@@ -55,15 +55,15 @@ button {
 }
 
 button:hover {
-  background-color: #218838;
+  background-color: darkedgreen;
 }
 
 .todo-item {
-  margin-top: 8px;
+  margin-top: 8;
 }
 
 .todo-item input[type="checkbox"] {
-  accent-color: #28a745;
+  accent-color: green;
   margin-left: 5%;
 }
 
