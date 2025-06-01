@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jpark Diary</title>
-  <link rel="stylesheet" href="./css/mystyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jpark Diary</title>
+    <link rel="stylesheet" href="./css/mystyle.css">
 </head>
 
 <body>
-  <div class="title">
-    To-Do List
-  </div>
-
-  <div class="date">
-    날짜
-  </div>
-
-  <div class="content">
-    <div class="saying" id="quoteBox"></div>
-    <div class="text">
-        📋 할 일 목록
+    <div class="title">
+        To-Do List
     </div>
-    <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
-    <button onclick="addTodo()" id="btn">추가</button>
 
-    <div id="todoList"></div>
-  </div>
-  <script src="./javascript.js"></script>
+    <div class="content">
+        <div class="left-pane">
+            <div class="quote-container">
+                <div class="saying" id="quoteBox"></div>
+                <button id="changeQuoteBtn">🔄</button>
+            </div>
+            <div class="text">
+                📋 할 일 목록
+            </div>
+            <input type="text" id="todoInput" placeholder="할 일을 입력하세요">
+            <button onclick="addTodo()" id="btn">추가</button>
+            <div id="todoList"></div>
+        </div>
+
+        <div class="right-pane">
+            <div class="calendar-container">
+                <div class="calendar-header" id="calendarHeader"></div>
+                <table class="calendar">
+                    <thead>
+                        <tr>
+                            <th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="./javascript.js"></script>
 </body>
 </html>
