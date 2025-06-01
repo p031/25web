@@ -1,101 +1,233 @@
-.title{
-  font-size : 60px;
-  text-align : center;
-  font-size: 60px;
-  text-align: center;
+/* 전체적인 폰트 설정 (이전에 추천드렸던 폰트 중 하나) */
+body {
+    font-family: 'Nanum Gothic', sans-serif; /* Google Fonts에서 Nanum Gothic을 임포트했는지 확인해주세요. */
+    background-color: #FBF8F1; /* 아주 연한 크림색/아이보리 - body 배경 */
+    color: #5F5B56; /* 기본 텍스트 색상 (차분한 다크 브라운/그레이) */
 }
 
-.date{
-  font-size : 25px;
-  margin : 5% 10% 0 70%;   /*상 우 하 좌*/
-  border : 1px solid #000000;
-  text-align : center;
-  font-size: 25px;
-  margin: 5% 10% 0 70%;   /*상 우 하 좌*/
-  border: 1px solid #000000;
-  text-align: center;
+/* 제목 (To-Do List) */
+.title {
+    font-size: 60px;
+    text-align: center;
+    color: #4A4642; /* 진한 다크 브라운 */
 }
 
-.content{
-  margin : 0 10% 0 10%;   /*상 우 하 좌*/
-  font-size : 25px;
-  border : 1px solid #000000;
-  height : 700px;
-  margin: 0 10% 0 10%;   /*상 우 하 좌*/
-  font-size: 25px;
-  border: 1px solid #000000;
-  height: 700px;
+/* 전체 컨테이너 (left-pane과 right-pane을 감싸는 부분) */
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    height: 650px; /* 이전에 고정 높이에 대한 고려사항을 말씀드렸습니다. */
+    border: 1px solid #E0D9D0; /* 부드러운 테두리 */
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #FCF7ED; /* 연한 아이보리 - 콘텐츠 컨테이너 배경 */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* 은은한 그림자 추가 */
 }
 
-.saying{ /*명언 넣는 부분*/
-  margin : 10px 100px 0 30px;  /*상 우 하 좌*/
-  font-size : 25px;
-  height : 45px;
-  width : 80%;
-  text-align : center;
-  margin: 10px 100px 0 30px;  /*상 우 하 좌*/
-  font-size: 25px;
-  height: 45px;
-  width: 80%;
-  text-align: center;
-  font-style: italic;
-  color: #555;
-  color: #555555;
-  background-color: bisque;
+/* 왼쪽 패널 (명언, 할 일 목록) */
+.left-pane {
+    width: 60%;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
-.text{  /*할 일 목록 제목*/
-  font-size : 25px;
-  margin : 5% 65% 2% 5%;  /*상 우 하 좌*/
-  text-align : center;
-  font-size: 25px;
-  margin: 5% 65% 2% 5%;  /*상 우 하 좌*/
-  text-align: center;
+/* 오른쪽 패널 (캘린더) */
+.right-pane {
+    width: 38%;
+    box-sizing: border-box;
 }
 
+/* 명언과 버튼을 감싸는 컨테이너 */
+.quote-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 20px auto; /* 하단 마진 추가 */
+    max-width: 600px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #E0D9D0; /* 부드러운 테두리 */
+    background-color: #EEDBB1; /* 부드러운 황갈색/베이지 */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 은은한 그림자 */
+}
+
+/* 명언 텍스트 부분 */
+.saying {
+    font-size: 25px;
+    /* height: 45px; 제거 또는 조정 */
+    flex-grow: 1;
+    text-align: center;
+    font-style: italic;
+    color: #5F5B56; /* 명언 텍스트 색상 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px; /* 명언과 버튼 사이 간격 */
+    /* background-color: bisque; (이전 색상 제거) */
+}
+
+/* 명언 변경 버튼 */
+#changeQuoteBtn {
+    background-color: #E0D9D0; /* 부드러운 배경 */
+    color: #4A4642; /* 아이콘 색상 */
+    border: 1px solid #C1BBA6; /* 버튼과 어울리는 테두리 */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: background-color 0.2s ease; /* 부드러운 호버 효과 */
+}
+#changeQuoteBtn:hover {
+    background-color: #CEC8C0; /* 호버 시 약간 어두운 색 */
+}
+
+/* "📋 할 일 목록" 텍스트 */
+.text {
+    font-size: 25px;
+    margin: 5% 65% 2% 5%; /* 이 마진은 여전히 조정이 필요할 수 있습니다. */
+    text-align: left; /* 이미지에 더 가깝게 왼쪽 정렬로 변경 */
+    color: #4A4642; /* 텍스트 색상 */
+}
+
+/* 할 일 입력 필드 */
 input[type="text"] {
-  padding: 10px;
-  width: 300px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-left: 5%;
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    border: 1px solid #E0D9D0; /* 부드러운 테두리 */
+    border-radius: 5px;
+    margin-left: 5%;
+    background-color: #FFFFFF; /* 순수 흰색 */
+    color: #5F5B56; /* 입력 텍스트 색상 */
 }
 
-button {
-  padding: 10px 20px;
-  margin-left: 10px;
-  font-size: 16px;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+/* 추가 버튼 */
+button { /* 일반 버튼 스타일, #btn이 여기에 포함됩니다. */
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    background-color: #D0C9B6; /* 뮤트 그린 그레이 */
+    color: #4A4642; /* 또는 흰색 #FFFFFF */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
-
 button:hover {
-  background-color: #218838;
+    background-color: #A6B0A0; /* 호버 시 약간 어두운 색 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
+/* 할 일 목록 개별 아이템 */
 .todo-item {
-  margin-top: 8px;
+    margin-top: 8px;
+    display: flex; /* 체크박스, 텍스트, 버튼을 한 줄에 정렬 */
+    align-items: center;
+    padding: 5px 0;
 }
 
 .todo-item input[type="checkbox"] {
-  accent-color: #28a745;
-  margin-left: 5%;
+    accent-color: #C1BBA6; /* 체크박스 색상 */
+    margin-left: 5%;
+    transform: scale(1.2); /* 체크박스 크기 약간 키우기 */
 }
 
-.delete_button{
- background-color: red;
-  color: white;
-  border: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  margin-left: 10px;
-  cursor: pointer;
+/* 체크된 할 일 텍스트 */
+.todo-item input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #999; /* 체크 후 글자색 */
+    text-decoration-color: #D3A9A7; /* 체크선 색상 변경 (지원하는 브라우저에서만 적용) */
 }
 
+/* 삭제 버튼 */
+.delete_button {
+    background-color: #E6B9B7; /* 소프트 로즈 */
+    color: #FFFFFF; /* 흰색 글자 */
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
 .delete_button:hover {
-  background-color: darkred;
+    background-color: #B99593; /* 호버 시 약간 어두운 색 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+}
+
+/* 캘린더 컨테이너 */
+.calendar-container {
+    background-color: #ffffff; /* 연한 베이지 - 캘린더 자체 배경 */
+    border: 1px solid #E0D9D0; /* 부드러운 테두리 */
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* 캘린더 헤더 (2025년 6월) */
+.calendar-header {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4A4642; /* 달력 헤더 텍스트 색상 */
+}
+
+/* 캘린더 테이블 */
+.calendar {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* 캘린더 요일 및 날짜 셀 */
+.calendar th, .calendar td {
+    border: 1px solid #E0D9D0; /* 부드러운 셀 테두리 */
+    padding: 10px;
+    height: 50px;
+    color: #5F5B56; /* 달력 날짜 글자색 */
+}
+
+/* 캘린더 요일 헤더 */
+.calendar th {
+    background-color: #EDE2D3; /* 요일 배경색 */
+    color: #4A4642; /* 요일 글자색 */
+    font-weight: normal; /* 필요하다면 굵기 조절 */
+}
+.calendar th:first-child { color: #D3A9A7; } /* 일요일 빨간색 (선택 사항) */
+.calendar th:last-child { color: #9AB8CE; } /* 토요일 파란색 (선택 사항) */
+
+
+/* 캘린더의 오늘 날짜 스타일 */
+.calendar td.today {
+    background-color: #E4C0A8; /* 은은한 코랄 베이지 */
+    font-weight: bold;
+    color: #4A4642; /* 오늘 날짜 글자색 */
+    border: 2px solid #D3A9A7; /* 강조 테두리 */
+    border-radius: 5px;
+    display: flex; /* 날짜를 셀 중앙에 배치하기 위함 */
+    align-items: center;
+    justify-content: center;
+    margin: auto; /* 셀 중앙 정렬 */
+}
+
+/* 달력 셀 마우스 오버 효과 (선택 사항) */
+.calendar td:hover:not(.today) { /* 오늘 날짜가 아닐 때만 호버 효과 적용 */
+    background-color: #F8F3EB; /* 호버 시 더 연한 베이지 */
+    cursor: pointer;
 }
